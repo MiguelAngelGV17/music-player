@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <main class="song_container">
+        </main>
+        <div class="song_values_and_progress">
+            <p class="song_values">
+                <span id="playbackTime">00:00</span>
+                <span id="totalPlaybackTime">00:00</span>
+            </p>
+            <input type="range" id="progressBar" min="0" value="0" step="1">
+        </div>
+        <div class="song_control">
+            <span class="prev-song"><img  src="./src/icons/Stop_and_play_fill-1.svg" alt="previous-btn"></span>
+            <span class="play-stop_button"><img class="play-stop" src="./src/icons/Play_fill.svg" alt="play-btn"></span>
+            <span class="next-song"><img  src="./src/icons/Stop_and_play_fill.svg" alt="next-btn"></span>
+        </div>
+    </header>
+    
+    <script src="main.js"></script>
+</body>
+</html>

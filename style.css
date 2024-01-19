@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap");
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap")
+    format("woff2");
+}
+
+:root {
+  --bgCard: #212936;
+  --fontColorSongTitle: #e5e7eb;
+  --fontColorSongSinger: #4d5562;
+  --fontColorTime: #4d5562;
+  --buttonAndBar: #c93b76;
+}
+
+/* Reset some default styles */
+body,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(src/pictures/bg.jpg);
+  background-repeat: no-repeat;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", serif;
+}
+
+.container,
+.song_values_and_progress,
+.song_control,
+.play-stop_button {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  margin: 107px auto auto auto;
+  width: 348px;
+  border-radius: 20px;
+  background-color: var(--bgCard);
+  padding: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.image_container {
+  width: 100%;
+  img {
+    border-radius: 20px;
+    width: 100%;
+  }
+}
+
+.song_title {
+  margin-top: 0.66rem;
+  color: var(--fontColorSongTitle);
+  font-size: 16px;
+  font-weight: 500;
+}
+.song_singer {
+  color: var(--fontColorSongSinger);
+  font-size: 12px;
+  align-self: center;
+}
+
+.song_values_and_progress {
+  margin: 1.55rem auto 2.2rem auto;
+  width: 100%;
+  font-size: 10px;
+  color: var(--fontColorTime);
+  font-weight: 500;
+  flex-direction: column;
+}
+
+.song_values {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#progressBar[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 4px;
+  border-radius: 5px;
+  background: var(--buttonAndBar);
+  box-shadow: -200px 0 0 199px var(--buttonAndBar);
+}
+
+.song_control {
+  gap: 1rem;
+}
+
+.play-stop_button {
+  width: 49px;
+  height: 49px;
+  justify-content: center;
+  background-color: #c93b76;
+  box-shadow: 0 10px 30px -10px var(--buttonAndBar);
+  border-radius: 50%;
+}
